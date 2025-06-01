@@ -51,7 +51,15 @@ const config = defineConfig({
   ],
   adapter: node({
     mode: 'standalone'
-  })
+  }),
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+        interval: 1000,
+      },
+    },
+  }
 });
 
 export default config;

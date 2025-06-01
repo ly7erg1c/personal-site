@@ -3,9 +3,9 @@
     "id": 1,
     "icon": {
       "type": "lucide",
-      "name": "cake"
+      "name": "axe"
     },
-    "text": "1 year old"
+    "text": "Hack the planet!"
   },
   {
     "id": 2,
@@ -14,6 +14,6 @@
       "name": "earth"
     },
     "type": "lucide",
-    "text": "Made in Germany"
+    "text": "US, TN"
   }
 ]
