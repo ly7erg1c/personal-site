@@ -25,7 +25,7 @@ export const getStaticPaths = (async () => {
 
 console.log(project.data.info);
 
-const { Content } = await render(project);
+const { Content, headings } = await render(project);
 ---
 <Layout
   title={project.data.title}
@@ -52,6 +52,21 @@ const { Content } = await render(project);
         })}
       </ul>
     </Card>
+    {headings.length > 0 && (
+      <Card class="toc-card">
+        <h2 class="no-mt">Table of contents</h2>
+        <ol>
+          <li class="toc-li">
+            <a href={`#_top`} class="active">{project.data.title}</a>
+          </li>
+          {headings.map((heading, i) => (
+            <li class="toc-li" data-depth={heading.depth}>
+              <a href={`#${heading.slug}`}>{heading.text}</a>
+            </li>
+          ))}
+        </ol>
+      </Card>
+    )}
   </div>
   <article slot="right" data-pagefind-body>
     <Card>
@@ -72,10 +87,61 @@ const { Content } = await render(project);
     </Card>
   </article>
 </Layout>
-<style>
+<script src="../../scripts/toc.ts" />
+<style is:global>
+  .toc-card ol {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 0;
+    list-style-type: none;
+    position: relative;
+  }
+
+  .toc-card ol li a {
+    color: #c7c7c7;
+    font-size: .925rem;
+    padding: .25rem .5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .toc-card ol li a:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  .toc-card ol li a.active {
+    color: white;
+    background: var(--primary);
+  }
+
+  .left {
+    height: 100%;
+    position: relative;
+  }
+
+  .toc-card {
+    position: sticky;
+    top: 2rem;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   .project-info-item {
     display: flex;
     align-items: center;
     gap: 1rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    article {
+      gap: 1rem;
+    }
   }
 </style>
