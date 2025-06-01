@@ -23,7 +23,7 @@ const {
 
 // https://astro.build/config
 const config = defineConfig({
-  site: 'https://spectre.louisescher.dev',
+  site: 'https://l0l.zip',
   output: 'static',
   integrations: [
     expressiveCode({
@@ -32,15 +32,15 @@ const config = defineConfig({
     mdx(),
     sitemap(),
     spectre({
-      name: 'Spectre',
+      name: 'l0l.zip',
       openGraph: {
         home: {
-          title: 'Spectre',
+          title: 'l0l.zip',
           description: 'A minimalistic theme for Astro.'
         },
         blog: {
           title: 'Blog',
-          description: 'News and guides for Spectre.'
+          description: 'News and guides for l0l.zip.'
         },
         projects: {
           title: 'Projects'
