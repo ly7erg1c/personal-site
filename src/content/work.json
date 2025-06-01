@@ -1,9 +1,24 @@
 [
   {
-    "id": 1,
-    "duration": "2024 - present",
-    "company": "Astro Community",
-    "title": "Astro Theme",
-    "description": "Existing as an Astro theme for anyone to use."
+    "id": 4,
+    "duration": "Jan 2023 - Dec 2023",
+    "company": "NDA (MSSP)",
+    "title": "Security Analyst.",
+    "description": "Executed high-volume threat investigations across various industries, supporting rapid response workflows within a high-tempo MSSP SOC."
+  },
+  {
+    "id": 3,
+    "duration": "Dec 2023 - Jun 2024",
+    "company": "NDA (MSSP)",
+    "title": "Information Security Analyst II.",
+    "description": "Performed threat detection and analysis targeting risks in a complex multi-tenant environment."
+  },
+
+  {
+    "id": 2,
+    "duration": "Jun 2024 - present",
+    "company": "NDA",
+    "title": "Security Threat Engineer.",
+    "description": "Triage and analysis of high priority threats within a large enterprise healthcare environment."
   }
 ]
