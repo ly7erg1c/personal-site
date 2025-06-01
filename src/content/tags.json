@@ -1,5 +1,23 @@
 [
   {
     "id": "guide"
+  },
+  {
+    "id": "pgp"
+  },
+  {
+    "id": "gnupg"
+  },
+  {
+    "id": "encryption"
+  },
+  {
+    "id": "pgp-key"
+  },
+  {
+    "id": "pgp-encryption"
+  },
+  {
+    "id": "pgp-key"
   }
 ]
