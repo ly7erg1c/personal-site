@@ -54,6 +54,7 @@ const config = defineConfig({
   }),
   vite: {
     server: {
+      allowedHosts: ["l0l.zip"],
       watch: {
         usePolling: true,
         interval: 1000,
